@@ -1,0 +1,54 @@
+http://ec2-3-17-190-209.us-east-2.compute.amazonaws.com:8080/jnlpJars/agent.jar
+
+java -jar agent.jar -jnlpUrl http://ec2-3-17-190-209.us-east-2.compute.amazonaws.com:8080/computer/Linux_1/jenkins-agent.jnlp -secret a207465faaf4fab7e091d06ebff4e8965ff26313cb5ac8153af12c6148fe7324 -workDir "/home/ec2-user"
+sudo wget http://ec2-3-17-190-209.us-east-2.compute.amazonaws.com:8080/jnlpJars/agent.jar
+
+ssh -i "/Users/m_238194/Perm/DevOps-Learn.pem" ec2-user@ec2-18-222-65-199.us-east-2.compute.amazonaws.com
+
+ssh -i "/Users/m_238194/Perm/DevOps-Learn.pem" ec2-user@ec2-3-14-153-147.us-east-2.compute.amazonaws.com
+
+ssh -i "/Users/m_238194/Perm/DevOps-Learn.pem" ec2-user@ec2-3-139-77-245.us-east-2.compute.amazonaws.com
+
+ec2-3-131-153-201.us-east-2.compute.amazonaws.com
+
+http://ec2-3-139-77-245.us-east-2.compute.amazonaws.com:9000/sonar
+
+Sonar Qube Fotf token - 1b105096ab3db07cd7a6ae6fb8bdb4ec530d592b
+mvn sonar:sonar \
+  -Dsonar.projectKey=Fotf \
+  -Dsonar.host.url=http://ec2-3-139-77-245.us-east-2.compute.amazonaws.com:9000/sonar \
+  -Dsonar.login=1b105096ab3db07cd7a6ae6fb8bdb4ec530d592b
+
+
+
+mvn archetype:generate -DgroupId=com.learn.healthcare -DartifactId=Fotf -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+ <distributionManagement>
+    <repository>
+        <id>nexus-snapshots</id>
+        <name>releases</name>
+        <url>http://ec2-18-188-104-13.us-east-2.compute.amazonaws.com:8081/repository/Fotf/</url>
+    </repository>    
+    <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <name>snapshots</name>
+        <url>http://ec2-18-188-104-13.us-east-2.compute.amazonaws.com:8081/repository/Fotf/</url>
+    </snapshotRepository>
+</distributionManagement>
+
+
+postgresql10-contrib-10.7-1PGDG.rhel7.x86_64.rpm
+sudo yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/postgresql10-libs-10.7-1PGDG.rhel7.x86_64.rpm -y
+sudo yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/postgresql10-server-10.7-1PGDG.rhel7.x86_64.rpm -y
+
+
+sudo sysctl -w vm.max_map_count=262144
+sudo sysctl fs.file-max=65536
+ulimit -n 65535
+ulimit -u 4096
+
+su - sonar
+cd /opt/sonarqube/bin/linux-x86-64
+
+Nexus URL
+http://ec2-18-222-65-199.us-east-2.compute.amazonaws.com:8081/
