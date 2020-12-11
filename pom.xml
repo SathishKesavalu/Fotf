@@ -25,7 +25,7 @@
     <snapshotRepository>
         <id>nexus-snapshots</id>
         <name>snapshots</name>
-        <url>http://ec2-18-222-65-199.us-east-2.compute.amazonaws.com:8081/repository/Fotf/</url>
+        <url>http://ec2-52-15-174-104.us-east-2.compute.amazonaws.com:8081/repository/Fotf/</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
