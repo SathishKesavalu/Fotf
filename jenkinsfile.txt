@@ -20,7 +20,7 @@ pipeline {
          steps {
                 sh 'mvn sonar:sonar \
                     -Dsonar.projectKey=Fotf \
-                    -Dsonar.host.url=http://ec2-3-139-77-245.us-east-2.compute.amazonaws.com:9000/sonar \
+                    -Dsonar.host.url=http://ec2-3-12-111-70.us-east-2.compute.amazonaws.com:9000/sonar \
                     -Dsonar.login=1b105096ab3db07cd7a6ae6fb8bdb4ec530d592b'
               }
       }
